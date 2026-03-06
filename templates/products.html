@@ -1,0 +1,192 @@
+{% extends 'base.html' %}
+{% block title %}Services — CantiLever Solutions{% endblock %}
+
+{% block content %}
+
+<!-- DARK: Page header with photo -->
+<div class="page-header">
+  <div class="page-header-bg">
+    <img src="{{ url_for('static', filename='images/pcb-macro.png') }}" alt="">
+  </div>
+  <div class="container page-header-content">
+    <span class="label label-light">Services</span>
+    <h1>What We Design</h1>
+    <p>Custom PCB design and engineering for microscopy, LED illumination, sensing, and precision instrumentation.</p>
+  </div>
+</div>
+
+<!-- LIGHT: Services table -->
+<section class="light-section">
+  <div class="container">
+    <span class="label">Capabilities</span>
+    <h2 class="section-title">Full scope of services</h2>
+    <p class="section-lead">We take on projects at any stage — from early concept to a design that needs DFM preparation before production.</p>
+
+    <div class="products-table">
+      <div class="product-row product-row-header">
+        <div class="product-cell">Service</div>
+        <div class="product-cell">Description</div>
+        <div class="product-cell">Type</div>
+      </div>
+      <div class="product-row">
+        <div class="product-cell product-name">LED Illuminator Driver Boards</div>
+        <div class="product-cell product-desc">Custom LED driver PCBs for microscope illumination — halogen-to-LED retrofits and new-build illuminators for stereo zoom, upright, inverted, and slit lamp systems. Compatible with Zeiss, Nikon, Olympus, Leica, Leitz, Wild Heerbrugg, Bausch &amp; Lomb, and others.</div>
+        <div class="product-cell product-tag">Custom Design</div>
+      </div>
+      <div class="product-row">
+        <div class="product-cell product-name">Illumination Control Electronics</div>
+        <div class="product-cell product-desc">PWM brightness control, thermal management, constant-current regulation, and intensity feedback circuits for high-power LED illumination systems and ring light assemblies.</div>
+        <div class="product-cell product-tag">Custom Design</div>
+      </div>
+      <div class="product-row">
+        <div class="product-cell product-name">Capacitive Transducer Circuits</div>
+        <div class="product-cell product-desc">High-resolution capacitive sensing front ends for displacement, position, and force measurement. Sub-nanometer resolution achievable with proper shielding and excitation design.</div>
+        <div class="product-cell product-tag">Custom Design</div>
+      </div>
+      <div class="product-row">
+        <div class="product-cell product-name">MEMS &amp; Test Probe Interfaces</div>
+        <div class="product-cell product-desc">Signal conditioning and readout PCBs for metal MEMS devices, micro-fabricated cantilever probes, and miniature test structures. Low-noise, high-bandwidth front ends.</div>
+        <div class="product-cell product-tag">Custom Design</div>
+      </div>
+      <div class="product-row">
+        <div class="product-cell product-name">Microscope Control Boards</div>
+        <div class="product-cell product-desc">Controller PCBs for stage motion, focus drives, filter wheel actuation, shutter control, and multi-channel illumination switching in research and OEM microscope platforms.</div>
+        <div class="product-cell product-tag">Custom Design</div>
+      </div>
+      <div class="product-row">
+        <div class="product-cell product-name">Sensing &amp; Detector Electronics</div>
+        <div class="product-cell product-desc">Interface boards for photodiodes, PMTs, avalanche photodiodes, and CCD/CMOS sensors. High-speed data paths and impedance-matched layouts for confocal, fluorescence, and brightfield systems.</div>
+        <div class="product-cell product-tag">Custom Design</div>
+      </div>
+      <div class="product-row">
+        <div class="product-cell product-name">Motion &amp; Piezo Drivers</div>
+        <div class="product-cell product-desc">High-voltage bipolar driver boards for piezo actuators and stepper/servo systems in precision positioning stages and nanopositioning platforms.</div>
+        <div class="product-cell product-tag">Custom Design</div>
+      </div>
+      <div class="product-row">
+        <div class="product-cell product-name">AFM &amp; SPM Electronics</div>
+        <div class="product-cell product-desc">Boards for atomic force and scanning probe microscopy — lock-in amplifier circuits, transimpedance stages, Z-feedback control, and cantilever deflection readout.</div>
+        <div class="product-cell product-tag">Custom Design</div>
+      </div>
+      <div class="product-row">
+        <div class="product-cell product-name">Prototype &amp; Development</div>
+        <div class="product-cell product-desc">Rapid prototyping from schematic to first article. BOM management and coordination with assembly partners.</div>
+        <div class="product-cell product-tag">Full Service</div>
+      </div>
+      <div class="product-row">
+        <div class="product-cell product-name">Design Review &amp; DFM</div>
+        <div class="product-cell product-desc">Independent review of existing designs — signal integrity, EMC, power delivery, and DFM optimization for volume production. Written findings report included.</div>
+        <div class="product-cell product-tag">Consulting</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DARK: Full-bleed image -->
+<div class="img-feature">
+  <img src="{{ url_for('static', filename='images/pcb-macro.png') }}" alt="CantiLever custom PCB — dense SMT layout">
+  <div class="img-feature-overlay">
+    <div class="img-feature-text">
+      <h2>Designed around your instrument</h2>
+      <p>Every mechanical envelope, connector pinout, and power supply rail is accounted for before layout begins. We design to fit — not the other way around.</p>
+    </div>
+  </div>
+</div>
+
+<!-- LIGHT: Technical scope + brand note -->
+<section class="light-section">
+  <div class="container">
+    <div class="split">
+      <div>
+        <span class="label">Technical Scope</span>
+        <h2 class="section-title">Design capabilities</h2>
+        <p class="section-lead">We work across a broad range of technologies and are comfortable with demanding physical and electrical constraints.</p>
+        <ul class="services-list">
+          <li>
+            <span class="service-title">LED Driver Design</span>
+            <span class="service-desc">Constant-current regulation, PWM dimming, over-temperature protection, and soft-start for high-power LED illumination. Experience with single-die, multi-die, and ring-light configurations.</span>
+          </li>
+          <li>
+            <span class="service-title">Low-Noise Analog</span>
+            <span class="service-desc">Transimpedance amplifiers, synchronous demodulation, and precision references for capacitive transducer and photodetector front ends.</span>
+          </li>
+          <li>
+            <span class="service-title">Mixed-Signal Layout</span>
+            <span class="service-desc">Careful partitioning of analog and digital domains, guard routing, and shielding for quiet measurement electronics.</span>
+          </li>
+          <li>
+            <span class="service-title">Thermal Management</span>
+            <span class="service-desc">Thermal simulation and copper pour strategy essential for LED driver boards — preventing lumen depreciation and extending service life.</span>
+          </li>
+          <li>
+            <span class="service-title">EMC</span>
+            <span class="service-desc">EMC-conscious layout for laboratory instruments. Pre-compliance experience toward CE and FCC marks.</span>
+          </li>
+        </ul>
+        <div class="brand-note">
+          <span class="brand-note-label">Instrument Brand Experience</span>
+          <p>We have worked with or designed to the specifications of instruments from: <strong>Zeiss, Nikon, Olympus, Leica, Leitz Wetzlar, Wild Heerbrugg, Bausch &amp; Lomb, American Optical, Diagnostic Instruments, Haag-Streit</strong>, and others. If your platform isn't listed, get in touch — we're happy to review the specs.</p>
+        </div>
+      </div>
+      <div class="img-pair">
+        <img class="tall" src="{{ url_for('static', filename='images/pcb-lit.png') }}" alt="Powered PCB assembly with LEDs active">
+        <img class="sq" src="{{ url_for('static', filename='images/pcb-macro.png') }}" alt="Dense SMD component layout">
+        <img class="sq" src="https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=500&q=85" alt="Scientific microscope">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Example applications -->
+<section class="gray-section" style="padding: var(--section-y) 0;">
+  <div class="container">
+    <span class="label">Examples</span>
+    <h2 class="section-title">What these projects look like</h2>
+    <p class="section-lead">To give a sense of scope — these are representative examples of the types of projects we take on. Every engagement is different, and we're happy to discuss your specific situation.</p>
+    <div class="example-list">
+      <div class="example-item">
+        <div class="example-img">
+          <img src="{{ url_for('static', filename='images/pcb-lit.png') }}" alt="LED driver board powered">
+        </div>
+        <div class="example-body">
+          <span class="label">LED Illumination</span>
+          <h3>Halogen-to-LED retrofit</h3>
+          <p>A customer with an aging halogen illuminator needs a drop-in LED driver board that fits the original housing, maintains the same connector pinout, and adds PWM dimming. We design from scratch or adapt an existing topology to the mechanical and electrical constraints of the instrument.</p>
+        </div>
+      </div>
+      <div class="example-item">
+        <div class="example-img">
+          <img src="{{ url_for('static', filename='images/pcb-macro.png') }}" alt="Dense SMD PCB">
+        </div>
+        <div class="example-body">
+          <span class="label">Signal Conditioning</span>
+          <h3>Detector interface board</h3>
+          <p>A research lab needs a compact interface board for a photodetector or PMT — transimpedance amplifier, filtering, and a clean analog output. We handle the full schematic and layout, with attention to noise, shielding, and the PCB's physical footprint inside the instrument.</p>
+        </div>
+      </div>
+      <div class="example-item">
+        <div class="example-img">
+          <img src="https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=800&q=85" alt="Precision microscope instrument">
+        </div>
+        <div class="example-body">
+          <span class="label">Instrument Electronics</span>
+          <h3>Custom controller for a precision stage</h3>
+          <p>An instrument builder needs a multi-axis controller board with encoder inputs, DAC outputs, and a USB interface — designed to fit inside a specific enclosure. We scope the requirements, select components, and deliver production-ready Gerbers.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DARK: CTA -->
+<section class="cta-banner">
+  <div class="container cta-inner">
+    <div>
+      <h2>Ready to start a project?</h2>
+      <p>Tell us what you need. We'll respond within 48 hours with a plan and estimate.</p>
+    </div>
+    <a href="{{ url_for('contact') }}" class="btn btn-dark">Get in Touch</a>
+  </div>
+</section>
+
+{% endblock %}

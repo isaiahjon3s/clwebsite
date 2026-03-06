@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+{% block title %}Contact — CantiLever Solutions{% endblock %}
+
+{% block content %}
+
+<!-- DARK: Page header with photo -->
+<div class="page-header">
+  <div class="page-header-bg">
+    <img src="{{ url_for('static', filename='images/pcb-macro.png') }}" alt="">
+  </div>
+  <div class="container page-header-content">
+    <span class="label label-light">Contact</span>
+    <h1>Get in Touch</h1>
+    <p>Send us a project brief and we'll follow up within two business days with an initial assessment.</p>
+  </div>
+</div>
+
+<!-- LIGHT: Contact form -->
+<section class="light-section">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-aside">
+        <span class="label">Inquiries</span>
+        <h2>Let's talk about your project</h2>
+        <p>Whether you have a detailed spec or an early concept, we're happy to review it and give you an honest assessment of scope and timeline. We're also happy to sign an NDA before any sensitive discussion.</p>
+        <ul class="contact-list">
+          <li>
+            <strong>Email</strong>
+            <span>inquiries@cantilever-solutions.com</span>
+          </li>
+          <li>
+            <strong>Response</strong>
+            <span>Within 2 business days</span>
+          </li>
+          <li>
+            <strong>Location</strong>
+            <span>Remote — serving clients across North America and internationally</span>
+          </li>
+          <li>
+            <strong>NDA</strong>
+            <span>Available upon request before discussing sensitive projects</span>
+          </li>
+        </ul>
+      </div>
+
+      <form action="{{ url_for('contact') }}" method="post">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Name *</label>
+            <input type="text" id="name" name="name" required placeholder="Your full name">
+          </div>
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required placeholder="you@organization.com">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="company">Company or Institution</label>
+          <input type="text" id="company" name="company" placeholder="Optional">
+        </div>
+        <div class="form-group">
+          <label for="project_type">Project Type</label>
+          <select id="project_type" name="project_type">
+            <option value="">— Select one —</option>
+            <option value="led">LED Illuminator / Driver Board</option>
+            <option value="illumination">Illumination Control Electronics</option>
+            <option value="capacitive">Capacitive Transducer Circuit</option>
+            <option value="mems">MEMS / Test Probe Interface</option>
+            <option value="microscope">Microscope Control / Detector Board</option>
+            <option value="afm">AFM / SPM Electronics</option>
+            <option value="piezo">Piezo / Motion Driver</option>
+            <option value="prototype">Prototype Development</option>
+            <option value="dfm">DFM / Design for Production</option>
+            <option value="review">Design Review or Consulting</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Project Details *</label>
+          <textarea id="message" name="message" required placeholder="Describe your project: what it does, key requirements, layer count if known, timeline, and any other relevant context."></textarea>
+        </div>
+        <button type="submit" class="btn btn-dark" style="width: 100%; padding: 0.8rem;">Send Inquiry</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

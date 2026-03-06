@@ -1,0 +1,116 @@
+{% extends 'base.html' %}
+{% block title %}CantiLever Solutions — Custom PCB Design{% endblock %}
+
+{% block content %}
+
+<!-- DARK: Hero -->
+<section class="hero">
+  <div class="hero-bg">
+    <img src="{{ url_for('static', filename='images/pcb-macro.png') }}" alt="">
+  </div>
+  <div class="container">
+    <div class="hero-inner">
+      <span class="label label-light">PCB Design &amp; Engineering</span>
+      <h1>Custom electronics for microscopes and precision instruments</h1>
+      <p class="lead">We design PCBs for LED illumination systems, microscope control electronics, capacitive transducers, and MEMS interfaces — built to the exact requirements of your instrument.</p>
+      <div class="hero-actions">
+        <a href="{{ url_for('contact') }}" class="btn btn-light">Discuss a Project</a>
+        <a href="{{ url_for('products') }}" class="btn btn-outline-light">Our Services</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LIGHT: What We Do -->
+<section class="light-section" style="border-top: 1px solid var(--border-light);">
+  <div class="container">
+    <div class="split">
+      <div>
+        <span class="label">What We Do</span>
+        <h2 class="section-title">Specialized PCB design, start to finish</h2>
+        <p class="section-lead">From the first block diagram to fabrication-ready files, we handle every stage — and coordinate with fab and assembly partners on your behalf.</p>
+        <ul class="services-list">
+          <li>
+            <span class="service-title">LED Illumination Electronics</span>
+            <span class="service-desc">Driver boards for LED microscope illuminators — halogen replacement and new designs for Zeiss, Nikon, Olympus, Leica, and others.</span>
+          </li>
+          <li>
+            <span class="service-title">Microscope Control Boards</span>
+            <span class="service-desc">Controller PCBs for stage motion, focus drives, filter wheels, and illumination switching.</span>
+          </li>
+          <li>
+            <span class="service-title">Capacitive Transducer Circuits</span>
+            <span class="service-desc">High-resolution capacitive sensing front ends for precision displacement and force measurement.</span>
+          </li>
+          <li>
+            <span class="service-title">MEMS &amp; Test Probe Interfaces</span>
+            <span class="service-desc">Low-noise signal conditioning and interface PCBs for metal MEMS, cantilever probes, and micro-scale sensors.</span>
+          </li>
+          <li>
+            <span class="service-title">DFM &amp; Fabrication Support</span>
+            <span class="service-desc">Design-for-manufacturing review, Gerber generation, and coordination with fab and assembly partners.</span>
+          </li>
+        </ul>
+      </div>
+      <div class="img-pair">
+        <img class="tall" src="{{ url_for('static', filename='images/pcb-macro.png') }}" alt="CantiLever PCB — dense SMD layout">
+        <img class="sq" src="{{ url_for('static', filename='images/pcb-lit.png') }}" alt="Powered PCB with indicator LEDs">
+        <img class="sq" src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=500&q=85" alt="Electronic components">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DARK: Full-bleed image feature -->
+<div class="img-feature">
+  <img src="{{ url_for('static', filename='images/pcb-lit.png') }}" alt="Powered CantiLever board with LED indicators active">
+  <div class="img-feature-overlay">
+    <div class="img-feature-text">
+      <h2>Drop-in precision, instrument by instrument</h2>
+      <p>Whether it's a halogen-to-LED retrofit for a Zeiss stereo zoom or a capacitive transducer front end, we design to fit the exact mechanical and electrical constraints of your platform.</p>
+    </div>
+  </div>
+</div>
+
+<!-- LIGHT: Process -->
+<section class="light-section" style="padding: var(--section-y) 0;">
+  <div class="container">
+    <span class="label">How We Work</span>
+    <h2 class="section-title">A straightforward process</h2>
+    <div class="process-steps">
+      <div class="process-step">
+        <p class="step-num">01 — Discovery</p>
+        <h3>Scoping</h3>
+        <p>We review your requirements and constraints. No-obligation call and written proposal.</p>
+      </div>
+      <div class="process-step">
+        <p class="step-num">02 — Design</p>
+        <h3>Layout</h3>
+        <p>Schematic capture and PCB layout with structured reviews at agreed milestones.</p>
+      </div>
+      <div class="process-step">
+        <p class="step-num">03 — Validation</p>
+        <h3>Review</h3>
+        <p>DFM check, simulation where applicable, and sign-off before releasing to fab.</p>
+      </div>
+      <div class="process-step">
+        <p class="step-num">04 — Delivery</p>
+        <h3>Handoff</h3>
+        <p>Complete fabrication package, BOM, and assembly drawings. Prototype support available.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DARK: CTA -->
+<section class="cta-banner">
+  <div class="container cta-inner">
+    <div>
+      <h2>Have a project in mind?</h2>
+      <p>Send us the details. We respond within two business days with an assessment and next steps.</p>
+    </div>
+    <a href="{{ url_for('contact') }}" class="btn btn-dark">Contact Us</a>
+  </div>
+</section>
+
+{% endblock %}

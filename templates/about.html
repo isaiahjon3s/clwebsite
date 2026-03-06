@@ -1,0 +1,120 @@
+{% extends 'base.html' %}
+{% block title %}About — CantiLever Solutions{% endblock %}
+
+{% block content %}
+
+<!-- DARK: Page header with photo -->
+<div class="page-header">
+  <div class="page-header-bg">
+    <img src="{{ url_for('static', filename='images/pcb-lit.png') }}" alt="">
+  </div>
+  <div class="container page-header-content">
+    <span class="label label-light">About</span>
+    <h1>CantiLever Solutions</h1>
+    <p>A specialized PCB design firm focused on the needs of scientists, researchers, and instrument engineers.</p>
+  </div>
+</div>
+
+<!-- LIGHT: Background -->
+<section class="light-section">
+  <div class="container">
+    <div class="split">
+      <div>
+        <span class="label">Our Background</span>
+        <h2 class="section-title">Built for scientific instrumentation</h2>
+        <p class="about-body">CantiLever Solutions was founded to serve a specific gap in the PCB design market: organizations building or servicing scientific instruments who need more than a generalist layout shop, but don't have the resources to maintain a full in-house electronics team.</p>
+        <p class="about-body">Much of our work centers on LED illumination electronics — designing drop-in driver boards that replace aging halogen illuminators in microscopes from Zeiss, Nikon, Olympus, Leica, and others. We also design capacitive transducer front ends, MEMS and test probe interfaces, detector electronics, and the full range of control boards that make precision instruments work.</p>
+        <p class="about-body">The name comes from the cantilever — the probe at the heart of atomic force microscopy, and a structure that represents precision, sensitivity, and careful engineering. We apply those same principles to every board we design.</p>
+      </div>
+      <div class="img-pair">
+        <img class="tall" src="{{ url_for('static', filename='images/pcb-macro.png') }}" alt="CantiLever PCB — macro shot">
+        <img class="sq" src="{{ url_for('static', filename='images/pcb-lit.png') }}" alt="Powered PCB assembly">
+        <img class="sq" src="https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=500&q=85" alt="Scientific microscope">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DARK: Full-bleed image -->
+<div class="img-feature">
+  <img src="{{ url_for('static', filename='images/pcb-lit.png') }}" alt="CantiLever board powered with active LEDs">
+  <div class="img-feature-overlay">
+    <div class="img-feature-text">
+      <h2>We don't just deliver files</h2>
+      <p>We're available for prototype bring-up, debug support, and design iteration as your hardware evolves.</p>
+    </div>
+  </div>
+</div>
+
+<!-- LIGHT: Design principles -->
+<section class="gray-section" style="padding: var(--section-y) 0;">
+  <div class="container">
+    <span class="label">How We Approach Design</span>
+    <h2 class="section-title">Principled, documented, reproducible</h2>
+    <div class="three-col">
+      <div class="three-col-item">
+        <h3>Signal Integrity First</h3>
+        <p>We start layout with the critical signal paths — high-speed buses, sensitive analog nets, clock distribution — before placing anything else. Impedance control and return path analysis are not afterthoughts.</p>
+      </div>
+      <div class="three-col-item">
+        <h3>EMC by Design</h3>
+        <p>Proper stackup, guard routing, ferrite placement, and decoupling strategy are designed in from the start. Fewer board spins, fewer surprises in the EMC chamber.</p>
+      </div>
+      <div class="three-col-item">
+        <h3>DFM Discipline</h3>
+        <p>Designs that can't be built reliably aren't good designs. DFM rules are applied throughout layout — not just at the end — resulting in better yields and lower assembly cost.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LIGHT: Tools -->
+<section class="light-section">
+  <div class="container">
+    <div class="split">
+      <div>
+        <span class="label">Tools &amp; Standards</span>
+        <h2 class="section-title">What we use</h2>
+        <p class="section-lead">We work in the tools our clients use and adhere to industry standards throughout.</p>
+        <ul class="services-list">
+          <li>
+            <span class="service-title">Design Tools</span>
+            <span class="service-desc">Altium Designer, KiCad. Handoffs accepted from OrCAD, Eagle, and others.</span>
+          </li>
+          <li>
+            <span class="service-title">Simulation</span>
+            <span class="service-desc">LTspice for LED driver, analog, and power circuit simulation. HyperLynx for SI/PI on high-speed designs.</span>
+          </li>
+          <li>
+            <span class="service-title">Standards</span>
+            <span class="service-desc">IPC-2221, IPC-7351, IPC-A-610. CE and FCC pre-compliance experience for laboratory instruments.</span>
+          </li>
+          <li>
+            <span class="service-title">Instrument Platforms</span>
+            <span class="service-desc">Design experience with Zeiss, Nikon, Olympus, Leica, Leitz, Wild Heerbrugg, Bausch &amp; Lomb, American Optical, Diagnostic Instruments, and Haag-Streit systems.</span>
+          </li>
+          <li>
+            <span class="service-title">Version Control</span>
+            <span class="service-desc">Design files managed in Git. Full revision history and change documentation included with every project.</span>
+          </li>
+        </ul>
+      </div>
+      <div style="display: flex; flex-direction: column; justify-content: center;">
+        <img src="{{ url_for('static', filename='images/pcb-macro.png') }}" alt="CantiLever PCB detail" style="border: 1px solid var(--border-light); border-radius: 1px;">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DARK: CTA -->
+<section class="cta-banner">
+  <div class="container cta-inner">
+    <div>
+      <h2>Let's work together.</h2>
+      <p>Describe your project and we'll get back to you within two business days.</p>
+    </div>
+    <a href="{{ url_for('contact') }}" class="btn btn-dark">Start a Conversation</a>
+  </div>
+</section>
+
+{% endblock %}
